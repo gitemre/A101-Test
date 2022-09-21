@@ -16,20 +16,12 @@ public class BasePage {
     }
 
     public WebElement find(By locator){
-
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         return driver.findElement(locator);
-
-
-
     }
 
     public void click(By locator){
-        //driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        //find(locator).click();
-        WebDriverWait wait = new WebDriverWait(driver,20);
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
-        element.click();
-
+        find(locator).click();
     }
 
     public List<WebElement> findAll(By locator){

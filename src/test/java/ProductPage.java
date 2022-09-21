@@ -15,6 +15,7 @@ public class ProductPage extends BasePage {
     By clickProduct = By.cssSelector("a[title='Penti Kadın 50 Denye Pantolon Çorabı Siyah'] h3[class='name']");
     By selectedColor = By.xpath("//span[contains(text(),'SİYAH')]");
     By addtoBasket = By.cssSelector(".add-to-basket.button.green.block.with-icon.js-add-basket");
+    By viewBasket = By.cssSelector("a[class=go-to-shop]");
 
 
     public ProductPage(WebDriver driver) {
@@ -31,6 +32,7 @@ public class ProductPage extends BasePage {
         Thread.sleep(3000);
         click(clickProduct);
         click(addtoBasket);
+        click(viewBasket);
 
 
     }
