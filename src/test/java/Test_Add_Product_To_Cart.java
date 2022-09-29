@@ -2,6 +2,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class Test_Add_Product_To_Cart extends BaseTest {
 
@@ -29,9 +31,12 @@ public class Test_Add_Product_To_Cart extends BaseTest {
 
     @Test
     @Order(3)
-    public void buy_Page(){
+    public void buy_Page() throws InterruptedException {
         cartPage = new CartPage(driver);
         cartPage.checkAndBuy();
+
+
+
     }
 
 
